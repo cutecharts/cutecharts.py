@@ -5,4 +5,8 @@ from example.example_pie import pie_base
 
 tab = Tab()
 tab.add("Bar", bar_base())
+# tab.add("Line", line_base())
+
+for t in tab:
+    print(t)
 tab.render()

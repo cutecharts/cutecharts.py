@@ -3,7 +3,20 @@ import os
 from jinja2 import Environment, FileSystemLoader
 
 
+class _NotebookType:
+    JUPYTER_NOTEBOOK = "jupyter_notebook"
+    JUPYTER_LAB = "jupyter_lab"
+    # NTERACT = "nteract"
+    # ZEPPELIN = "zeppelin"
+
+
+NotebookType = _NotebookType()
+# OnlineHostType = _OnlineHost()
+
+
 class _CurrentConfig:
+    # ONLINE_HOST = OnlineHostType.DEFAULT_HOST
+    NOTEBOOK_TYPE = NotebookType.JUPYTER_NOTEBOOK
     GLOBAL_ENV = Environment(
         keep_trailing_newline=True,
         trim_blocks=True,

@@ -8,7 +8,7 @@
 </head>
 <body>
     {{ macro.generate_tab_css() }}
-    {{ macro.display_tablinks(c) }}
+    {{ macro.display_tablinks(chart) }}
 
     <div class="box">
         {% for c in chart %}
@@ -16,6 +16,5 @@
         {% endfor %}
     </div>
 
-    {{ macro.switch_tabs() }}
 </body>
 </html>

@@ -1,11 +1,11 @@
 {%- macro render_chart_content(chart) -%}
-<div id="{{ chart.chart_id }}" class="chart-container" style="width: {{ chart.width }}">
-    <svg id="chart_{{ chart.chart_id }}"></svg>
-</div>
-<script>
-    const svg_{{ chart.chart_id }} = document.querySelector('#chart_{{ chart.chart_id }}')
-    const chart_{{ chart.chart_id }} = new chartXkcd.{{ chart.CHART_TYPE }}(svg_{{ chart.chart_id }}, {{ chart.opts }});
-</script>
+    <div id="{{ chart.chart_id }}" class="chart-container" style="width: {{ chart.width }}">
+        <svg id="chart_{{ chart.chart_id }}"></svg>
+    </div>
+    <script>
+        const svg_{{ chart.chart_id }} = document.querySelector('#chart_{{ chart.chart_id }}')
+        const chart_{{ chart.chart_id }} = new chartXkcd.{{ chart.CHART_TYPE }}(svg_{{ chart.chart_id }}, {{ chart.opts }});
+    </script>
 {%- endmacro %}
 
 {%- macro display_tablinks(chart) -%}
