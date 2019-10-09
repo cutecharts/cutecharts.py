@@ -9,7 +9,9 @@ class _CurrentConfig:
         trim_blocks=True,
         lstrip_blocks=True,
         loader=FileSystemLoader(
-            os.path.join(os.path.abspath(os.path.dirname(__file__)), "templates")
+            os.path.join(
+                os.path.abspath(os.path.dirname(__file__)), "render", "templates"
+            )
         ),
     )
 

@@ -11,4 +11,4 @@ class Scatter(BasicChart):
 
     def add_series(self, name, data):
         pairs = [{"x": item[0], "y": item[1]} for item in data]
-        self.opts["data"]["datasets"].append({"name": name, "data": pairs})
+        self.opts["data"]["datasets"].append({"label": name, "data": pairs})

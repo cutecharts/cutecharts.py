@@ -11,4 +11,4 @@ class Line(BasicChart):
         self.opts["options"] = {"yTickCount": 3}
 
     def add_series(self, name, data):
-        self.opts["data"]["datasets"].append({"name": name, "data": data})
+        self.opts["data"]["datasets"].append({"label": name, "data": data})

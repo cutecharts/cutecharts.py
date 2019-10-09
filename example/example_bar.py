@@ -3,7 +3,7 @@ from cutecharts.components import Page
 
 
 def bar_base() -> Bar:
-    chart = Bar("This is title", width="800px")
+    chart = Bar("This is title")
     chart.set_options(
         labels=["商家A", "商家B", "商家C", "商家D", "商家E", "商家F"],
         x_label="I'm xlabel",
