@@ -1,18 +1,26 @@
 from cutecharts.charts import Pie
 from cutecharts.components import Page
+from cutecharts.faker import Faker
 
 
 def pie_base() -> Pie:
-    chart = Pie("This is title")
-    chart.set_options(labels=["商家A", "商家B", "商家C", "商家D", "商家E", "商家F"])
-    chart.add_series([10, 20, 21, 41, 13, 14])
+    chart = Pie("Pie-基本示例")
+    chart.set_options(labels=Faker.choose())
+    chart.add_series(Faker.values())
     return chart
 
 
 def pie_legend_font():
-    pass
+    chart = Pie("Pie-Legend")
+    chart.set_options(
+        labels=Faker.choose(),
+        legend_pos="downLeft",
+        font_family='"Times New Roman",Georgia,Serif;',
+    )
+    chart.add_series(Faker.values())
+    return chart
 
 
 page = Page()
-page.add(pie_base())
+page.add(pie_base(), pie_legend_font())
 page.render()

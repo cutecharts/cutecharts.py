@@ -27,7 +27,7 @@ class Bar(BasicChart):
         self.opts.update({"xLabel": x_label, "yLabel": y_label})
         self.opts["data"]["labels"] = labels
         self.opts["options"] = {
-            "y_tick_count": y_tick_count,
+            "yTickCount": y_tick_count,
             "dataColors": colors,
             "fontFamily": font_family,
         }

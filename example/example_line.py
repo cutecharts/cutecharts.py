@@ -1,27 +1,32 @@
 from cutecharts.charts import Line
 from cutecharts.components import Page
+from cutecharts.faker import Faker
 
 
 def line_base() -> Line:
-    chart = Line("This is title")
-    chart.set_options(
-        labels=["商家A", "商家B", "商家C", "商家D", "商家E", "商家F"],
-        x_label="I'm xlabel",
-        y_label="I'm ylabel",
-    )
-    chart.add_series("seriesA", [10, 20, 21, 41, 13, 14])
-    chart.add_series("seriesB", [14, 28, 51, 41, 36, 21])
+    chart = Line("Line-基本示例")
+    chart.set_options(labels=Faker.choose(), x_label="I'm xlabel", y_label="I'm ylabel")
+    chart.add_series("series-A", Faker.values())
+    chart.add_series("series-B", Faker.values())
     return chart
 
 
-def bar_legend():
-    pass
+def line_legend():
+    chart = Line("Line-Legend 位置")
+    chart.set_options(labels=Faker.choose(), legend_pos="upRight")
+    chart.add_series("series-A", Faker.values())
+    chart.add_series("series-B", Faker.values())
+    return chart
 
 
-def bar_tickcount_colors():
-    pass
+def line_tickcount_colors():
+    chart = Line("Line-调整颜色")
+    chart.set_options(labels=Faker.choose(), colors=Faker.colors, y_tick_count=8)
+    chart.add_series("series-A", Faker.values())
+    chart.add_series("series-B", Faker.values())
+    return chart
 
 
 page = Page()
-page.add(line_base())
+page.add(line_base(), line_legend(), line_tickcount_colors())
 page.render()
