@@ -3,7 +3,7 @@ from cutecharts.charts.basic import BasicChart
 
 class Pie(BasicChart):
 
-    CHART, CHART_CLASS = "Pie", "pie-chart"
+    CHART_TYPE = "Pie"
 
     def set_options(self, labels):
         self.opts["data"]["labels"] = labels

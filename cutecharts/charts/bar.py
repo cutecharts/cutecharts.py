@@ -3,9 +3,9 @@ from cutecharts.charts.basic import BasicChart
 
 class Bar(BasicChart):
 
-    CHART, CHART_CLASS = "Bar", "bar-chart"
+    CHART_TYPE = "Bar"
 
-    def set_options(self, labels, x_label, y_label):
+    def set_options(self, labels: list, x_label, y_label):
         self.opts.update({"xLabel": x_label, "yLabel": y_label})
         self.opts["data"]["labels"] = labels
         self.opts["options"] = {"yTickCount": 2}

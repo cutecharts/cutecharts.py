@@ -3,7 +3,7 @@ from cutecharts.charts.basic import BasicChart
 
 class Line(BasicChart):
 
-    CHART, CHART_CLASS = "Line", "line-chart"
+    CHART_TYPE = "Line"
 
     def set_options(self, labels, x_label, y_label):
         self.opts.update({"xLabel": x_label, "yLabel": y_label})
