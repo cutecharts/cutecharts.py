@@ -1,0 +1,9 @@
+{%- macro render_chart_content(c) -%}
+<div id="{{ c.chart_id }}" style="width: {{ c.width }}">
+    <svg id="chart_{{ c.chart_id }}" class="{{ c.CHART_CLASS }}"></svg>
+</div>
+<script>
+    const svg_{{ c.chart_id }} = document.querySelector('#chart_{{ c.chart_id }}')
+    const chart_{{ c.chart_id }} = new chartXkcd.{{ c.CHART }}(svg_{{ c.chart_id }}, {{ c.opts }});
+</script>
+{%- endmacro %}
