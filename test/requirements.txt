@@ -1,0 +1,5 @@
+nose
+codecov
+coverage
+jupyter
+flake8
