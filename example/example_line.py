@@ -14,6 +14,14 @@ def line_base() -> Line:
     return chart
 
 
+def bar_legend():
+    pass
+
+
+def bar_tickcount_colors():
+    pass
+
+
 page = Page()
 page.add(line_base())
 page.render()

@@ -9,6 +9,10 @@ def scatter_base() -> Scatter:
     return chart
 
 
+def scatter_dotsize_tickount():
+    pass
+
+
 page = Page()
 page.add(scatter_base())
 page.render()

@@ -16,6 +16,14 @@ class Bar(BasicChart):
         colors: Optional[Iterable] = None,
         font_family: Optional[str] = None,
     ):
+        """
+        :param labels:
+        :param x_label:
+        :param y_label:
+        :param y_tick_count:
+        :param colors:
+        :param font_family:
+        """
         self.opts.update({"xLabel": x_label, "yLabel": y_label})
         self.opts["data"]["labels"] = labels
         self.opts["options"] = {
@@ -23,6 +31,12 @@ class Bar(BasicChart):
             "dataColors": colors,
             "fontFamily": font_family,
         }
+        return self
 
-    def add_series(self, name, data):
+    def add_series(self, name: str, data: Iterable):
+        """
+        :param name:
+        :param data:
+        """
         self.opts["data"]["datasets"].append({"label": name, "data": data})
+        return self

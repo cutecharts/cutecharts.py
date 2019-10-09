@@ -9,6 +9,10 @@ def pie_base() -> Pie:
     return chart
 
 
+def pie_legend_font():
+    pass
+
+
 page = Page()
 page.add(pie_base())
 page.render()

@@ -14,6 +14,10 @@ def radar_base() -> Radar:
     return chart
 
 
+def radar_legend_colors():
+    pass
+
+
 page = Page()
 page.add(radar_base())
 page.render()

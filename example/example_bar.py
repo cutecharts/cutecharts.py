@@ -14,6 +14,10 @@ def bar_base() -> Bar:
     return chart
 
 
+def bar_tickcount_colors():
+    pass
+
+
 page = Page()
 page.add(bar_base())
 page.render()
