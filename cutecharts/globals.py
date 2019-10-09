@@ -11,11 +11,9 @@ class _NotebookType:
 
 
 NotebookType = _NotebookType()
-# OnlineHostType = _OnlineHost()
 
 
 class _CurrentConfig:
-    # ONLINE_HOST = OnlineHostType.DEFAULT_HOST
     NOTEBOOK_TYPE = NotebookType.JUPYTER_NOTEBOOK
     GLOBAL_ENV = Environment(
         keep_trailing_newline=True,

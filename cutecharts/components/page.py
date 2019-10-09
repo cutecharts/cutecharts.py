@@ -24,5 +24,8 @@ class Page(RenderEngine):
             json_content = json.dumps(chart.opts)
             chart.opts = json_content
 
-    def render(self, dest: str = "render.html", template_name: str = "page.html"):
+    def render(self, dest: str = "render.html", template_name: str = "page_local.html"):
         super().render(dest, template_name)
+
+    def render_notebook(self, template_name: str = "page_notebook.html"):
+        return super().render_notebook(template_name)

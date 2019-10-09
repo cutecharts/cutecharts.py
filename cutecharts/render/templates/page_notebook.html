@@ -1,0 +1,13 @@
+{% import 'macro' as macro %}
+
+<script>
+    require.config({
+        paths: {
+            'chartXkcd': 'https://cdn.jsdelivr.net/npm/chart.xkcd@1.1/dist/chart.xkcd.min'
+        }
+    });
+</script>
+
+{% for c in chart %}
+    {{ macro.render_chart_notebook(c) }}
+{% endfor %}

@@ -1,4 +1,6 @@
-from cutecharts.globals import CurrentConfig
+from typing import Iterable, Optional
+
+from cutecharts.globals import CurrentConfig, NotebookType
 
 
 def _flat(obj):
@@ -49,8 +51,21 @@ def remove_key_with_none_value(incoming_dict):
         return None
 
 
+class HTML:
+    def __init__(self, data: Optional[str] = None):
+        self.data = data
+
+    def _repr_html_(self):
+        return self.data
+
+    def __html__(self):
+        return self._repr_html_()
+
+
 class RenderEngine:
-    def render(self, dest: str = "render.html", template_name: str = "basic.html"):
+    def render(
+        self, dest: str = "render.html", template_name: str = "basic_local.html"
+    ):
         template = CurrentConfig.GLOBAL_ENV.get_template(template_name)
 
         if hasattr(self, "before_render"):
@@ -59,5 +74,11 @@ class RenderEngine:
         with open(dest, "w+", encoding="utf8") as f:
             f.write(template.render(chart=self))
 
-    def render_notebook(self):
-        pass
+    def render_notebook(self, template_name: str = "basic_notebook.html"):
+        template = CurrentConfig.GLOBAL_ENV.get_template(template_name)
+
+        if hasattr(self, "before_render"):
+            self.before_render()
+
+        if CurrentConfig.NOTEBOOK_TYPE == NotebookType.JUPYTER_NOTEBOOK:
+            return HTML(template.render(chart=self))
