@@ -10,7 +10,7 @@ def bar_base() -> Bar:
     return chart
 
 
-bar_base().render_notebook()
+bar_base().render()
 
 
 def bar_tickcount_colors():
