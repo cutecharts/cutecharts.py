@@ -11,7 +11,7 @@ def gen_bar_base() -> Bar:
     return c
 
 
-def test_bar_base_before_render():
+def test_bar_opts_before():
     c = gen_bar_base()
     expected = {
         "title": "Bar",
@@ -26,7 +26,7 @@ def test_bar_base_before_render():
     assert_equal(c.opts, expected)
 
 
-def test_bar_base_after_render():
+def test_bar_opts_after():
     c = gen_bar_base()
     c.opts = remove_key_with_none_value(c.opts)
     expected = {

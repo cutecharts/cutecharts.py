@@ -11,7 +11,7 @@ def gen_radar_base() -> Radar:
     return c
 
 
-def test_radar_base_before_render():
+def test_radar_opts_before():
     c = gen_radar_base()
     expected = {
         "title": "Radar",
@@ -34,7 +34,7 @@ def test_radar_base_before_render():
     assert_equal(c.opts, expected)
 
 
-def test_radar_base_after_render():
+def test_radar_opts_after():
     c = gen_radar_base()
     c.opts = remove_key_with_none_value(c.opts)
     expected = {

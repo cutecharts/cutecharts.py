@@ -11,7 +11,7 @@ def gen_pie_base() -> Pie:
     return c
 
 
-def test_pie_base_before_render():
+def test_pie_opts_before():
     c = gen_pie_base()
     expected = {
         "title": "Pie",
@@ -26,7 +26,7 @@ def test_pie_base_before_render():
     assert_equal(c.opts, expected)
 
 
-def test_pie_base_after_render():
+def test_pie_opts_after():
     c = gen_pie_base()
     c.opts = remove_key_with_none_value(c.opts)
     expected = {

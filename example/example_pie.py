@@ -10,6 +10,9 @@ def pie_base() -> Pie:
     return chart
 
 
+pie_base().render()
+
+
 def pie_legend_font():
     chart = Pie("Pie-Legend")
     chart.set_options(

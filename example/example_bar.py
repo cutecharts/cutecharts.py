@@ -10,6 +10,9 @@ def bar_base() -> Bar:
     return chart
 
 
+bar_base().render_notebook()
+
+
 def bar_tickcount_colors():
     chart = Bar("Bar-调整颜色")
     chart.set_options(labels=Faker.choose(), y_tick_count=10, colors=Faker.colors)

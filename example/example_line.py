@@ -11,6 +11,9 @@ def line_base() -> Line:
     return chart
 
 
+line_base().render()
+
+
 def line_legend():
     chart = Line("Line-Legend 位置")
     chart.set_options(labels=Faker.choose(), legend_pos="upRight")

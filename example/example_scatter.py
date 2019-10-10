@@ -15,6 +15,9 @@ def scatter_base() -> Scatter:
     return chart
 
 
+scatter_base().render()
+
+
 def scatter_dotsize_tickount():
     chart = Scatter("Scatter-散点大小")
     chart.set_options(dot_size=2, y_tick_count=8)

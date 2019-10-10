@@ -10,10 +10,20 @@ class _NotebookType:
     # ZEPPELIN = "zeppelin"
 
 
+class _AssetsHost:
+    DEFAULT_HOST = "https://cdn.jsdelivr.net/npm/chart.xkcd@1.1/dist/"
+
+
 NotebookType = _NotebookType()
+AssetsHost = _AssetsHost()
+
+
+_ASSETS_DEPS_MAP = {"chartXkcd": "chart.xkcd.min"}
 
 
 class _CurrentConfig:
+    ASSETS_HOST = AssetsHost.DEFAULT_HOST
+    ASSETS_DEPS_MAP = _ASSETS_DEPS_MAP
     NOTEBOOK_TYPE = NotebookType.JUPYTER_NOTEBOOK
     GLOBAL_ENV = Environment(
         keep_trailing_newline=True,

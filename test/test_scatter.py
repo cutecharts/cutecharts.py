@@ -11,7 +11,7 @@ def gen_scatter_base() -> Scatter:
     return c
 
 
-def test_scatter_base_before_render():
+def test_scatter_opts_before():
     c = gen_scatter_base()
     expected = {
         "title": "Scatter",
@@ -37,7 +37,7 @@ def test_scatter_base_before_render():
     assert_equal(c.opts, expected)
 
 
-def test_scatter_base_after_render():
+def test_scatter_opts_after():
     c = gen_scatter_base()
     c.opts = remove_key_with_none_value(c.opts)
     expected = {

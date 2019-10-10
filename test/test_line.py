@@ -11,7 +11,7 @@ def gen_line_base() -> Line:
     return c
 
 
-def test_line_base_before_render():
+def test_line_opts_before():
     c = gen_line_base()
     expected = {
         "title": "Line",
@@ -31,7 +31,7 @@ def test_line_base_before_render():
     assert_equal(c.opts, expected)
 
 
-def test_line_base_after_render():
+def test_line_opts_after():
     c = gen_line_base()
     c.opts = remove_key_with_none_value(c.opts)
     expected = {

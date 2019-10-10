@@ -11,6 +11,9 @@ def radar_base() -> Radar:
     return chart
 
 
+radar_base().render()
+
+
 def radar_legend_colors():
     chart = Radar("Radar-颜色调整")
     chart.set_options(labels=Faker.choose(), colors=Faker.colors, legend_pos="upRight")
