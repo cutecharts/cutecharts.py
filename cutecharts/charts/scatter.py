@@ -21,16 +21,16 @@ class Scatter(BasicChart):
         font_family: Optional[str] = None,
     ):
         """
-        :param x_label:
-        :param y_label:
-        :param x_tick_count:
-        :param y_tick_count:
-        :param is_show_line:
-        :param dot_size:
-        :param time_format:
-        :param legend_pos:
-        :param colors:
-        :param font_family:
+        :param x_label: X 坐标轴名称
+        :param y_label: Y 坐标轴名称
+        :param x_tick_count: X 轴刻度分割段数
+        :param y_tick_count: Y 轴刻度分割段数
+        :param is_show_line: 是否显示辅助线
+        :param dot_size: 散点大小
+        :param time_format: 日期格式
+        :param legend_pos: 图例位置，有 "upLeft", "upRight", "downLeft", "downRight" 可选
+        :param colors: label 颜色数组
+        :param font_family: CSS font-family
         """
         self.opts.update({"xLabel": x_label, "yLabel": y_label})
         self.opts["options"] = {
@@ -47,8 +47,8 @@ class Scatter(BasicChart):
 
     def add_series(self, name: str, data: Iterable):
         """
-        :param name:
-        :param data:
+        :param name: series 名称
+        :param data: series 数据列表，[(x1, y1), (x2, y2)]
         """
         pairs = [{"x": item[0], "y": item[1]} for item in data]
         self.opts["data"]["datasets"].append({"label": name, "data": pairs})

@@ -16,11 +16,11 @@ class Pie(BasicChart):
         font_family: Optional[str] = None,
     ):
         """
-        :param labels:
-        :param inner_radius:
-        :param legend_pos:
-        :param colors:
-        :param font_family:
+        :param labels: 数据标签列表
+        :param inner_radius: Pie 图半径
+        :param legend_pos: 图例位置，有 "upLeft", "upRight", "downLeft", "downRight" 可选
+        :param colors: label 颜色数组
+        :param font_family: CSS font-family
         """
         self.opts["data"]["labels"] = labels
         self.opts["options"] = {

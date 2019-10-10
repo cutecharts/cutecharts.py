@@ -18,13 +18,13 @@ class Line(BasicChart):
         font_family: Optional[str] = None,
     ):
         """
-        :param labels:
-        :param x_label:
-        :param y_label:
-        :param y_tick_count:
-        :param legend_pos:
-        :param colors:
-        :param font_family:
+        :param labels: X 坐标轴标签数据
+        :param x_label: X 坐标轴名称
+        :param y_label: Y 坐标轴名称
+        :param y_tick_count: Y 轴刻度分割段数
+        :param legend_pos: 图例位置，有 "upLeft", "upRight", "downLeft", "downRight" 可选
+        :param colors: label 颜色数组
+        :param font_family: CSS font-family
         """
         self.opts.update({"xLabel": x_label, "yLabel": y_label})
         self.opts["data"]["labels"] = labels
@@ -38,8 +38,8 @@ class Line(BasicChart):
 
     def add_series(self, name: str, data: Iterable):
         """
-        :param name:
-        :param data:
+        :param name: series 名称
+        :param data: series 数据列表
         """
         self.opts["data"]["datasets"].append({"label": name, "data": data})
         return self

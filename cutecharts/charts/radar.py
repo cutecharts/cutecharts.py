@@ -10,8 +10,6 @@ class Radar(BasicChart):
     def set_options(
         self,
         labels: Iterable,
-        x_label: str = "",
-        y_label: str = "",
         is_show_label: bool = True,
         is_show_legend: bool = True,
         tick_count: int = 3,
@@ -20,17 +18,14 @@ class Radar(BasicChart):
         font_family: Optional[str] = None,
     ):
         """
-        :param labels:
-        :param x_label:
-        :param y_label:
-        :param is_show_label:
-        :param is_show_legend:
-        :param tick_count:
-        :param legend_pos:
-        :param colors:
-        :param font_family:
+        :param labels: 数据标签列表
+        :param is_show_label: 是否显示标签
+        :param is_show_legend: 是否显示图例
+        :param tick_count: 坐标系分割刻度
+        :param legend_pos: 图例位置，有 "upLeft", "upRight", "downLeft", "downRight" 可选
+        :param colors: label 颜色数组
+        :param font_family: CSS font-family
         """
-        self.opts.update({"xLabel": x_label, "yLabel": y_label})
         self.opts["data"]["labels"] = labels
         self.opts["options"] = {
             "showLegend": is_show_legend,
@@ -44,8 +39,8 @@ class Radar(BasicChart):
 
     def add_series(self, name: str, data: Iterable):
         """
-        :param name:
-        :param data:
+        :param name: series 名称
+        :param data: series 数据列表
         """
         self.opts["data"]["datasets"].append({"label": name, "data": data})
         return self
