@@ -24,6 +24,16 @@ def pie_legend_font():
     return chart
 
 
+def pie_radius():
+    chart = Pie("Pie-Radius")
+    chart.set_options(
+        labels=Faker.choose(),
+        inner_radius=0,
+    )
+    chart.add_series(Faker.values())
+    return chart
+
+
 page = Page()
-page.add(pie_base(), pie_legend_font())
+page.add(pie_base(), pie_legend_font(), pie_radius())
 page.render()
