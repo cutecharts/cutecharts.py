@@ -17,7 +17,7 @@ def pie_legend_font():
     chart = Pie("Pie-Legend")
     chart.set_options(
         labels=Faker.choose(),
-        legend_pos="downLeft",
+        legend_pos="upRight",
         font_family='"Times New Roman",Georgia,Serif;',
     )
     chart.add_series(Faker.values())
@@ -26,10 +26,7 @@ def pie_legend_font():
 
 def pie_radius():
     chart = Pie("Pie-Radius")
-    chart.set_options(
-        labels=Faker.choose(),
-        inner_radius=0,
-    )
+    chart.set_options(labels=Faker.choose(), inner_radius=0)
     chart.add_series(Faker.values())
     return chart
 

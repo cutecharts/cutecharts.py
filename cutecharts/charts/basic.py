@@ -14,6 +14,12 @@ class BasicChart(RenderEngine):
         height: str = "600px",
         assets_host: Optional[str] = None,
     ):
+        """
+        :param title: 图表标题
+        :param width: 图表宽度
+        :param height: 图表高度
+        :param assets_host: 引用资源 Host
+        """
         super().__init__()
         self.width = width
         self.height = height

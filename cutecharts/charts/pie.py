@@ -25,7 +25,7 @@ class Pie(BasicChart):
         self.opts["data"]["labels"] = labels
         self.opts["options"] = {
             "innerRadius": inner_radius,
-            "legendPosition": legend_pos,
+            "legendPosition": self._switch_pos(legend_pos),
             "dataColors": colors,
             "fontFamily": font_family,
         }
@@ -33,7 +33,7 @@ class Pie(BasicChart):
 
     def add_series(self, data: Iterable):
         """
-        :param data:
+        :param data: series 数据列表
         """
         self.opts["data"]["datasets"].append({"data": data})
         return self

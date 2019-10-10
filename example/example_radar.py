@@ -5,7 +5,7 @@ from cutecharts.faker import Faker
 
 def radar_base() -> Radar:
     chart = Radar("Radar-基本示例")
-    chart.set_options(labels=Faker.choose(), x_label="I'm xlabel", y_label="I'm ylabel")
+    chart.set_options(labels=Faker.choose())
     chart.add_series("series-A", Faker.values())
     chart.add_series("series-B", Faker.values())
     return chart
