@@ -30,6 +30,18 @@ def scatter_dotsize_tickount():
     return chart
 
 
+def scatter_show_line():
+    chart = Scatter("Scatter-散点连成线")
+    chart.set_options(y_tick_count=8, is_show_line=True)
+    chart.add_series(
+        "series-A", [(z[0], z[1]) for z in zip(Faker.values(), Faker.values())]
+    )
+    chart.add_series(
+        "series-B", [(z[0], z[1]) for z in zip(Faker.values(), Faker.values())]
+    )
+    return chart
+
+
 page = Page()
-page.add(scatter_base(), scatter_dotsize_tickount())
+page.add(scatter_base(), scatter_dotsize_tickount(), scatter_show_line())
 page.render()

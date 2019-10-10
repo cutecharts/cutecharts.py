@@ -19,8 +19,6 @@ def test_radar_opts_before():
             "datasets": [{"label": "series-A", "data": ["1", "2"]}],
             "labels": ["A", "B"],
         },
-        "xLabel": "",
-        "yLabel": "",
         "options": {
             "showLegend": True,
             "showLabel": True,

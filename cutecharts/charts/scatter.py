@@ -25,7 +25,7 @@ class Scatter(BasicChart):
         :param y_label: Y 坐标轴名称
         :param x_tick_count: X 轴刻度分割段数
         :param y_tick_count: Y 轴刻度分割段数
-        :param is_show_line: 是否显示辅助线
+        :param is_show_line: 是否将散点连成线
         :param dot_size: 散点大小
         :param time_format: 日期格式
         :param legend_pos: 图例位置，有 "upLeft", "upRight", "downLeft", "downRight" 可选
