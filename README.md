@@ -115,7 +115,7 @@ chart.render()
 
 ```shell
 $ pip install -r test/requirements.txt
-$ make
+$ test
 ```
 
 ### 集成测试
