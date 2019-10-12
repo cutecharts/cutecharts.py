@@ -20,7 +20,7 @@ def test_pie_opts_before():
             "dataColors": None,
             "fontFamily": None,
             "innerRadius": 0.5,
-            "legendPosition": "upLeft",
+            "legendPosition": 1,
         },
     }
     assert_equal(c.opts, expected)
@@ -32,7 +32,7 @@ def test_pie_opts_after():
     expected = {
         "title": "Pie",
         "data": {"datasets": [{"data": ["1", "2"]}], "labels": ["A", "B"]},
-        "options": {"innerRadius": 0.5, "legendPosition": "upLeft"},
+        "options": {"innerRadius": 0.5, "legendPosition": 1},
     }
 
     assert_equal(c.opts, expected)
