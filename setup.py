@@ -29,6 +29,7 @@ __version__ = about["__version__"]
 
 class UploadCommand(Command):
     description = "Build and publish the package."
+    user_options = []
 
     @staticmethod
     def status(s):
