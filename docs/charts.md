@@ -372,7 +372,7 @@ scatter_base().render()
 > Scatter-散点大小
 
 ```python
-def scatter_dotsize_tickount():
+def scatter_dotsize_tickcount():
     chart = Scatter("Scatter-散点大小")
     chart.set_options(dot_size=2, y_tick_count=8)
     chart.add_series(
