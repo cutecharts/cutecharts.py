@@ -18,7 +18,7 @@ def scatter_base() -> Scatter:
 scatter_base().render()
 
 
-def scatter_dotsize_tickount():
+def scatter_dotsize_tickcount():
     chart = Scatter("Scatter-散点大小")
     chart.set_options(dot_size=2, y_tick_count=8)
     chart.add_series(
@@ -43,5 +43,5 @@ def scatter_show_line():
 
 
 page = Page()
-page.add(scatter_base(), scatter_dotsize_tickount(), scatter_show_line())
+page.add(scatter_base(), scatter_dotsize_tickcount(), scatter_show_line())
 page.render()
