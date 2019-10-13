@@ -72,7 +72,7 @@ $ python setup.py install
 from cutecharts.charts import Line
 
 
-chart = Bar("某商场销售情况")
+chart = Line("某商场销售情况")
 chart.set_options(
     labels=["衬衫", "毛衣", "领带", "裤子", "风衣", "高跟鞋", "袜子"], 
     x_label="I'm xlabel", 
