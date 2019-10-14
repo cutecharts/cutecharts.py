@@ -37,7 +37,13 @@ template_name: str = "page_local.html"          渲染使用的模板，一般�
 ```
 Params                                          Desc
 ------                                          ----
-template_name: str = "page_notebook.html"      渲染使用的模板，一般不需要修改   
+template_type: str = "page"                     渲染使用的模板类型，一般不需要修改 
+```
+
+> cutecharts.components.Page.load_javascript
+
+```
+加载 JS 依赖，在 JupyterLab 渲染时使用。
 ```
 
 #### Demo

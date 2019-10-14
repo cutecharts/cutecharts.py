@@ -63,6 +63,7 @@ $ python setup.py install
 
 * 图表文档：[docs/charts.md](./docs/charts.md)
 * 组件文档：[docs/components.md](./docs/components.md)
+* 版本日志：[docs/changelog.md](./docs/changelog.md)
 
 ### 本地环境
 
@@ -94,6 +95,19 @@ chart.render()
 #### Jupyter Notebook
 
 ![](https://user-images.githubusercontent.com/19553554/66697950-8f3c6080-ed0c-11e9-99db-4337e82bc682.png)
+
+#### JupyterLab
+
+使用 JupyterLab 需要注意
+```python
+# 1. 在顶部引入声明
+from cutecharts.globals import use_jupyter_lab; use_jupyter_lab()
+
+# 2. 在 Notebook 中第一次使用图表时，先调用一次 `load_javascript`，仅需一次。
+chart.load_javascript()
+```
+
+![](https://user-images.githubusercontent.com/19553554/66731058-e581de80-ee87-11e9-971b-ee6c460b94c5.png)
 
 
 ## 🔖 Demo
