@@ -31,8 +31,7 @@ class Page(RenderEngine):
         for chart in self._charts:
             chart.chart_id = uuid.uuid4().hex
             chart.opts = remove_key_with_none_value(chart.opts)
-            json_content = json.dumps(chart.opts)
-            chart.opts = json_content
+            chart.json_content = json.dumps(chart.opts)
         self.local_cfg, self.notebook_cfg = self._produce_assets_cfg()
 
     def render(self, dest: str = "render.html", template_name: str = "page_local.html"):

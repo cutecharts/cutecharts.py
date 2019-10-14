@@ -32,8 +32,7 @@ class BasicChart(RenderEngine):
     def before_render(self):
         self.chart_id = uuid.uuid4().hex
         self.opts = remove_key_with_none_value(self.opts)
-        json_content = json.dumps(self.opts)
-        self.opts = json_content
+        self.json_content = json.dumps(self.opts)
         self.local_cfg, self.notebook_cfg = self._produce_assets_cfg()
 
     def _switch_pos(self, pos: str) -> int:
