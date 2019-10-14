@@ -26,13 +26,18 @@ dest: str = "render.html"                       渲染的文件路径
 template_name: str = "basic_local.html"         渲染使用的模板，一般不需要修改   
 ```
 
-
 **`render_notebook`**
 
 ```
 Params                                          Desc
 ------                                          ----
-template_name: str = "basic_notebook.html"      渲染使用的模板，一般不需要修改   
+template_type: str = "basic"                    渲染使用的模板类型，一般不需要修改 
+```
+
+**`load_javascript`**
+
+```
+加载 JS 依赖，在 JupyterLab 渲染时使用。
 ```
 
 

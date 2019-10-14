@@ -18,6 +18,18 @@ NotebookType = _NotebookType()
 AssetsHost = _AssetsHost()
 
 
+NotebookTemplateType = {
+    "basic": {
+        NotebookType.JUPYTER_LAB: "basic_jupyter_lab.html",
+        NotebookType.JUPYTER_NOTEBOOK: "basic_jupyter_notebook.html",
+    },
+    "page": {
+        NotebookType.JUPYTER_LAB: "page_jupyter_lab.html",
+        NotebookType.JUPYTER_NOTEBOOK: "page_jupyter_notebook.html",
+    },
+}
+
+
 _ASSETS_DEPS_MAP = {"chartXkcd": "chart.xkcd.min"}
 
 
@@ -38,3 +50,7 @@ class _CurrentConfig:
 
 
 CurrentConfig = _CurrentConfig()
+
+
+def use_jupyter_lab():
+    CurrentConfig.NOTEBOOK_TYPE = NotebookType.JUPYTER_LAB
