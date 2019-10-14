@@ -1,4 +1,5 @@
 import json
+import uuid
 from typing import Optional
 
 from cutecharts.globals import CurrentConfig
@@ -28,6 +29,7 @@ class Page(RenderEngine):
 
     def before_render(self):
         for chart in self._charts:
+            chart.chart_id = uuid.uuid4().hex
             chart.opts = remove_key_with_none_value(chart.opts)
             json_content = json.dumps(chart.opts)
             chart.opts = json_content
@@ -36,5 +38,5 @@ class Page(RenderEngine):
     def render(self, dest: str = "render.html", template_name: str = "page_local.html"):
         super().render(dest, template_name)
 
-    def render_notebook(self, template_name: str = "page_notebook.html"):
-        return super().render_notebook(template_name)
+    def render_notebook(self, template_type="page"):
+        return super().render_notebook(template_type)

@@ -30,6 +30,7 @@ class BasicChart(RenderEngine):
         self.assets_deps = ["chartXkcd"]
 
     def before_render(self):
+        self.chart_id = uuid.uuid4().hex
         self.opts = remove_key_with_none_value(self.opts)
         json_content = json.dumps(self.opts)
         self.opts = json_content
