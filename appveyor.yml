@@ -8,9 +8,9 @@ environment:
 
 install:
   - "%PYTHON%\\python.exe -m pip install -r requirements.txt"
-  - cd test
+  - cd tests
   - "%PYTHON%\\python.exe -m pip install -r requirements.txt"
 build: off
 
 test_script:
-  - "%PYTHON%/Scripts/nosetests --with-coverage --cover-package cutecharts --cover-package test && cd .. && %PYTHON%/Scripts/flake8 --exclude build --max-line-length 89 --ignore=F401"
+  - "%PYTHON%/Scripts/nosetests --with-coverage --cover-package cutecharts --cover-package tests && cd .. && %PYTHON%/Scripts/flake8 --exclude build --max-line-length 89 --ignore=F401"
