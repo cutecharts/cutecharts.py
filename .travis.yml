@@ -10,9 +10,9 @@ python:
   - "3.7-dev"
   - "3.6"
 before_install:
-  - pip install -r test/requirements.txt
+  - pip install -r tests/requirements.txt
 script:
   - python setup.py install
   - bash test.sh
 after_success:
-  cd test && codecov
+  cd tests && codecov
