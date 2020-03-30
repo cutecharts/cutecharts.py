@@ -8,7 +8,7 @@
 
 <p align="center">
     <a href="https://travis-ci.org/chenjiandongx/cutecharts.py">
-        <img src="https://travis-ci.org/chenjiandongx/cutecharts.py.svg?branch=master" alt="Travis Build Status">
+        <img src="https://travis-ci.org/chenjiandongx/cutecharts.svg?branch=master" alt="Travis Build Status">
     </a>
     <a href="https://ci.appveyor.com/project/chenjiandongx/cutecharts.py">
         <img src="https://ci.appveyor.com/api/projects/status/a6jp4db3mvm8d6mo/branch/master?svg=true" alt="Appveyor Build Status">
