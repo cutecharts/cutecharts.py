@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/19553554/66697551-27384b00-ed09-11e9-9fe8-210918fdeb77.png" alt="pyecharts logo" width=600/>
+    <img src="https://user-images.githubusercontent.com/19553554/66697551-27384b00-ed09-11e9-9fe8-210918fdeb77.png" alt="cutecharts.py logo" width=600/>
 </p>
 
 <p align="center">
@@ -7,13 +7,13 @@
 </p>
 
 <p align="center">
-    <a href="https://travis-ci.org/chenjiandongx/cutecharts">
-        <img src="https://travis-ci.org/chenjiandongx/cutecharts.svg?branch=master" alt="Travis Build Status">
+    <a href="https://travis-ci.org/chenjiandongx/cutecharts.py">
+        <img src="https://travis-ci.org/chenjiandongx/cutecharts.py.svg?branch=master" alt="Travis Build Status">
     </a>
-    <a href="https://ci.appveyor.com/project/chenjiandongx/cutecharts">
+    <a href="https://ci.appveyor.com/project/chenjiandongx/cutecharts.py">
         <img src="https://ci.appveyor.com/api/projects/status/a6jp4db3mvm8d6mo/branch/master?svg=true" alt="Appveyor Build Status">
     </a>
-    <a href="https://codecov.io/gh/chenjiandongx/cutecharts">
+    <a href="https://codecov.io/gh/chenjiandongx/cutecharts.py">
         <img src="https://codecov.io/gh/chenjiandongx/cutecharts/branch/master/graph/badge.svg" alt="Codecov">
     </a>
     <a href="https://badge.fury.io/py/cutecharts">
@@ -28,7 +28,7 @@
     <a href="https://pypi.org/project/cutecharts">
         <img src="https://img.shields.io/pypi/format/cutecharts.svg" alt="PyPI - Format">
     </a>
-     <a href="https://github.com/chenjiandongx/cutecharts/pulls">
+     <a href="https://github.com/chenjiandongx/cutecharts.py/pulls">
         <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="Contributions welcome">
     </a>
     <a href="https://opensource.org/licenses/MIT">
@@ -38,7 +38,7 @@
 
 ## 📣 初衷
 
-在闲逛 Github 的时候，发现了一个十分有趣的图表库 [chart.xkcd](https://github.com/timqian/chart.xkcd)，该库的图表的手绘风格很可爱。所以有了一个将 chart.xkcd 和 Python 相结合的想法，这个想法最终变成了你现在所看到的 [cutecharts](https://github.com/chenjiandongx/cutecharts)。
+在闲逛 Github 的时候，发现了一个十分有趣的图表库 [chart.xkcd](https://github.com/timqian/chart.xkcd)，该库的图表的手绘风格很可爱。所以有了一个将 chart.xkcd 和 Python 相结合的想法，这个想法最终变成了你现在所看到的 [cutecharts.py](https://github.com/chenjiandongx/cutecharts.py)。
 
 chart.xkcd 的图表类型相对 Echarts 来说少得多，只支持几种基本的图表且没有太多的配置项，想使用更丰富的图表的话 [pyecharts](https://github.com/pyecharts/pyecharts) 或许是个更好的选择。cutecharts 我个人的想法是作为一个学习如何将 Javascript 与 Python/Notebook 相结合的项目。毋庸置疑，JS 库在交互性以及动画效果上有天然的优势，若能够将其优势与 Notebook 环境结合起来的话，那将能够产生很多有趣的项目。
 
@@ -53,7 +53,7 @@ $ pip(3) install cutecharts
 
 **源码安装**
 ```shell
-$ git clone https://github.com/chenjiandongx/cutecharts.git
+$ git clone https://github.com/chenjiandongx/cutecharts.py.git
 $ cd cutecharts
 $ pip install -r requirements.txt
 $ python setup.py install
