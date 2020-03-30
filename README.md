@@ -112,7 +112,7 @@ chart.load_javascript()
 
 ## 🔖 Demo
 
-> Demo 代码位于 example 文件夹下。
+> Demo 代码位于 examples 文件夹下。
 
 <div align="center">
     <img src="https://user-images.githubusercontent.com/19553554/66558121-9f760380-eb85-11e9-8b37-6d4dbd39f2e8.png" width="33%"/>
@@ -128,7 +128,7 @@ chart.load_javascript()
 ### 单元测试
 
 ```shell
-$ pip install -r test/requirements.txt
+$ pip install -r tests/requirements.txt
 $ test
 ```
 

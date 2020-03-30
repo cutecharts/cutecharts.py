@@ -100,5 +100,5 @@ ENV/
 .mypy_cache/
 
 # custom
-example/*.html
-test/*.html
+examples/*.html
+tests/*.html

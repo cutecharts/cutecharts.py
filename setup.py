@@ -71,7 +71,7 @@ setup(
     author=about["__author__"],
     author_email=__author_email__,
     license=__license__,
-    packages=find_packages(exclude=("test",)),
+    packages=find_packages(exclude=("tests",)),
     keywords=__keywords__,
     install_requires=__requires__,
     zip_safe=False,
