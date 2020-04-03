@@ -36,38 +36,40 @@
     </a>
 </p>
 
-## 📣 初衷
+## 📣 Idea
 
-在闲逛 Github 的时候，发现了一个十分有趣的图表库 [chart.xkcd](https://github.com/timqian/chart.xkcd)，该库的图表的手绘风格很可爱。所以有了一个将 chart.xkcd 和 Python 相结合的想法，这个想法最终变成了你现在所看到的 [cutecharts.py](https://github.com/chenjiandongx/cutecharts.py)。
+[chart.xkcd](https://github.com/timqian/chart.xkcd) is an interesting visualization library written in Javascript, the chart style of chart.xkcd is so cute that I love it at first sight. 
 
-chart.xkcd 的图表类型相对 Echarts 来说少得多，只支持几种基本的图表且没有太多的配置项，想使用更丰富的图表的话 [pyecharts](https://github.com/pyecharts/pyecharts) 或许是个更好的选择。cutecharts 我个人的想法是作为一个学习如何将 Javascript 与 Python/Notebook 相结合的项目。毋庸置疑，JS 库在交互性以及动画效果上有天然的优势，若能够将其优势与 Notebook 环境结合起来的话，那将能够产生很多有趣的项目。
+There is no doubt that Javascript has more advantages in interaction as well as visual effect. Besides that, as we all know, Python is an expressive language and is loved by data science community. So I want to combine the strength of both technologies, as the result of this idea, [cutecharts.py](https://github.com/cutecharts/cutecharts.py) was born.
 
-cutecharts 的项目结构与 pyecharts 基本保持一致，拥有 pyecharts 的所有核心功能。但是整体更加小巧，代码更加精简。如果把 cutecharts 代码读完了，再去看 pyecharts 的代码，可能就会发现，其实也就那样，根本就没什么神秘的东西。在这里也是抛砖引玉，希望 Python 社区有更多地将 JS 与 Python/Notebook 结合的优秀第三方库。**cutecharts 的学习价值远大于它的使用价值。**
+Unfortunately, chart.xkcd only supports a few chart types as a visualization libraray, thus if you need more various kind of chart, [pyecharts](https://github.com/pyecharts/pyecharts) is better.
 
-## 🔰 安装
+What's worth pointing out is that cutecharts is more about a library which is used to learn how to combine Javascript world with Python/notebook. The project structure of cutecharts is the same as pyecharts and it supports all core features with pyecharts while being more lightweight also more concise overall.
 
-**pip 安装**
+The aim of this project is showing others that it's not difficult to write a pyecharts-like project. In fact, pyecharts does have no magic in its source code. As a member of Python cummunity, I hope more and more developers can use their creativity to make lots of related projects for our favorite Python world.
+
+## 🔰 Installation
+
+**pip install**
 ```shell
 $ pip(3) install cutecharts
 ```
 
-**源码安装**
+**install from source**
 ```shell
-$ git clone https://github.com/chenjiandongx/cutecharts.py.git
-$ cd cutecharts
+$ git clone https://github.com/cutecharts/cutecharts.py.git
+$ cd cutecharts.py
 $ pip install -r requirements.txt
 $ python setup.py install
 ```
 
-## 📝 使用
+## 📝 Usage
 
-* 图表文档：[docs/charts.md](./docs/charts.md)
-* 组件文档：[docs/components.md](./docs/components.md)
-* 版本日志：[docs/changelog.md](./docs/changelog.md)
+* charts: [docs/charts.md](./docs/charts.md)
+* components: [docs/components.md](./docs/components.md)
+* changelog: [docs/changelog.md](./docs/changelog.md)
 
-### 本地环境
-
-#### 生成 HTML
+### Render HTML
 
 ```python
 from cutecharts.charts import Line
@@ -84,13 +86,13 @@ chart.add_series("series-B", [114, 55, 27, 101, 125, 27, 105])
 chart.render()
 ```
 
-`render` 方法会在本地生成一个 render.html 文件，使用浏览器打开。
+And the `render.html` is rendered as below. Isn't that cool！
 
 <p align="center">
     <img src="https://user-images.githubusercontent.com/19553554/66697904-34a30480-ed0c-11e9-8827-656e2c274ca2.png"  width="85%" />
 </p>
 
-### Notebook 环境
+### Notebook
 
 #### Jupyter Notebook
 
@@ -98,12 +100,12 @@ chart.render()
 
 #### JupyterLab
 
-使用 JupyterLab 需要注意
+There are some jupyterlab details what you should pay attention to.
 ```python
-# 1. 在顶部引入声明
+# 1. imoport this on the top.
 from cutecharts.globals import use_jupyter_lab; use_jupyter_lab()
 
-# 2. 在 Notebook 中第一次使用图表时，先调用一次 `load_javascript`，仅需一次。
+# 2. call the `load_javascript` function when you renders chart first time.
 chart.load_javascript()
 ```
 
@@ -112,7 +114,7 @@ chart.load_javascript()
 
 ## 🔖 Demo
 
-> Demo 代码位于 examples 文件夹下。
+> All demo codes are under examples directory.
 
 <div align="center">
     <img src="https://user-images.githubusercontent.com/19553554/66558121-9f760380-eb85-11e9-8b37-6d4dbd39f2e8.png" width="33%"/>
@@ -123,22 +125,22 @@ chart.load_javascript()
     <img src="https://user-images.githubusercontent.com/19553554/66558614-6c803f80-eb86-11e9-8386-46315c5f0843.png" width="33%"/>
 </div>
 
-## ⛏ 代码质量
+## ⛏ Software development
 
-### 单元测试
+### Unit tests
 
 ```shell
 $ pip install -r tests/requirements.txt
 $ test
 ```
 
-### 集成测试
+### CI/CD
 
-使用 [Travis CI](https://travis-ci.org/) 和 [AppVeyor](https://ci.appveyor.com/) 持续集成环境。
+[Travis CI](https://travis-ci.org/) and [AppVeyor](https://ci.appveyor.com/) is place for continuous integration.
 
-### 代码规范
+### Coding styles
 
-使用 [flake8](http://flake8.pycqa.org/en/latest/index.html), [Codecov](https://codecov.io/) 以及 [pylint](https://www.pylint.org/) 提升代码质量。
+[flake8](http://flake8.pycqa.org/en/latest/index.html), [Codecov](https://codecov.io/) and [pylint](https://www.pylint.org/) are used.
 
 ## 📃 License
 
