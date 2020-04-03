@@ -40,13 +40,13 @@
 
 [chart.xkcd](https://github.com/timqian/chart.xkcd) is an interesting visualization library written in Javascript, the chart style of chart.xkcd is so cute that I love it at first sight. 
 
-There is no doubt that Javascript has more advantages in interaction as well as visual effect. On the other hand, Python is an expressive language and is loved by data science community. So I want to combine the strength of both technologies, as the result of this idea, [cutecharts.py](https://github.com/cutecharts/cutecharts.py) is born.
+There is no doubt that Javascript has more advantages in interaction as well as visual effect. Besides that, as we all know, Python is an expressive language and is loved by data science community. So I want to combine the strength of both technologies, as the result of this idea, [cutecharts.py](https://github.com/cutecharts/cutecharts.py) was born.
 
 Unfortunately, chart.xkcd only supports a few chart types as a visualization libraray, thus if you need more various kind of chart, [pyecharts](https://github.com/pyecharts/pyecharts) is better.
 
 What's worth pointing out is that cutecharts is more about a library which is used to learn how to combine Javascript world with Python/notebook. The project structure of cutecharts is the same as pyecharts and it supports all core features with pyecharts while being more lightweight also more concise overall.
 
-The aim of this project is showing others that it's not difficult to write a pyecharts-like project. In fact, pyecharts does have no magic in its source code. As a member of Python cummunity, I hope more and more developers can use their creativity to make lots of related projects for our favorite Python.
+The aim of this project is showing others that it's not difficult to write a pyecharts-like project. In fact, pyecharts does have no magic in its source code. As a member of Python cummunity, I hope more and more developers can use their creativity to make lots of related projects for our favorite Python world.
 
 ## 🔰 Installation
 
