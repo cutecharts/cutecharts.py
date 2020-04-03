@@ -38,11 +38,11 @@
 
 ## 📣 Idea
 
-[chart.xkcd](https://github.com/timqian/chart.xkcd) is an interesting visualization library written in Javascript, yet the chart style of chart.xkcd is so cute that I love it at first sight. 
+[chart.xkcd](https://github.com/timqian/chart.xkcd) is an interesting visualization library written in Javascript, the chart style of chart.xkcd is so cute that I love it at first sight. 
 
 There is no doubt that Javascript has more advantages in interaction as well as visual effect. On the other hand, Python is an expressive language and is loved by data science community. So I want to combine the strength of both technologies, as the result of this idea, [cutecharts.py](https://github.com/cutecharts/cutecharts.py) is born.
 
-chart.xkcd only supports a few chart types as a visualization libraray, thus if you need more various kind of chart, [pyecharts](https://github.com/pyecharts/pyecharts) might be the better choice.
+Unfortunately, chart.xkcd only supports a few chart types as a visualization libraray, thus if you need more various kind of chart, [pyecharts](https://github.com/pyecharts/pyecharts) is better.
 
 What's worth pointing out is that cutecharts is more about a library which is used to learn how to combine Javascript world with Python/notebook. The project structure of cutecharts is the same as pyecharts and it supports all core features with pyecharts while being more lightweight also more concise overall.
 
@@ -69,9 +69,7 @@ $ python setup.py install
 * components: [docs/components.md](./docs/components.md)
 * changelog: [docs/changelog.md](./docs/changelog.md)
 
-### Local Computer
-
-#### generate HTML
+### Render HTML
 
 ```python
 from cutecharts.charts import Line
@@ -88,7 +86,7 @@ chart.add_series("series-B", [114, 55, 27, 101, 125, 27, 105])
 chart.render()
 ```
 
-And the generated render.html is rendered as below. Isn't that cool！
+And the `render.html` is rendered as below. Isn't that cool！
 
 <p align="center">
     <img src="https://user-images.githubusercontent.com/19553554/66697904-34a30480-ed0c-11e9-8827-656e2c274ca2.png"  width="85%" />
@@ -136,7 +134,7 @@ $ pip install -r tests/requirements.txt
 $ test
 ```
 
-### Team development
+### CI/CD
 
 [Travis CI](https://travis-ci.org/) and [AppVeyor](https://ci.appveyor.com/) is place for continuous integration.
 
