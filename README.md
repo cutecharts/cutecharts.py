@@ -40,7 +40,7 @@
 
 [chart.xkcd](https://github.com/timqian/chart.xkcd) is an interesting visualization library written in Javascript, the chart style of chart.xkcd is so cute that I love it at first sight. 
 
-There is no doubt that Javascript has more advantages in interaction as well as visual effect. Besides that, as we all know, Python is an expressive language and is loved by data science community. Thus I want to combine the strength of both technologies, as the result of this idea, [cutecharts.py](https://github.com/cutecharts/cutecharts.py) was born.
+There is no doubt that Javascript has more advantages in interaction as well as visual effect. Besides that, as we all know, Python is an expressive language and is loved by data science community. Hence I want to combine the strength of both technologies, as the result of this idea, [cutecharts.py](https://github.com/cutecharts/cutecharts.py) is born.
 
 Unfortunately, chart.xkcd only supports a few chart types as a visualization libraray, thus if you have more needs in various kind of chart, [pyecharts](https://github.com/pyecharts/pyecharts) is better.
 
