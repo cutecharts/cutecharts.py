@@ -100,7 +100,7 @@ And the `render.html` is rendered as below. Isn't that cool！
 
 #### JupyterLab
 
-There are some jupyterlab details what you should pay attention to.
+There are some jupyterlab details that you should pay attention to.
 ```python
 # 1. imoport this on the top.
 from cutecharts.globals import use_jupyter_lab; use_jupyter_lab()
